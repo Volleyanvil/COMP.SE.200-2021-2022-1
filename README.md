@@ -1,4 +1,4 @@
-[![Build Status](https://app.travis-ci.com/Volleyanvil/COMP.SE.200-2021-2022-1.svg?branch=main)](https://app.travis-ci.com/Volleyanvil/COMP.SE.200-2021-2022-1)
+[![Build Status](https://app.travis-ci.com/Volleyanvil/COMP.SE.200-2021-2022-1.svg?branch=main)](https://app.travis-ci.com/Volleyanvil/COMP.SE.200-2021-2022-1) [![Coverage Status](https://coveralls.io/repos/github/Volleyanvil/COMP.SE.200-2021-2022-1/badge.svg?branch=main)](https://coveralls.io/github/Volleyanvil/COMP.SE.200-2021-2022-1?branch=main)
 # Student template
 
 ## Purpose of this repository
