@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "c8 --all --reporter=lcov --reporter=text-lcov mocha",
-    "localtest": "c8 mocha",
-    "coverage": "c8 report --reporter=text-lcov | coveralls"
+    "localtest": "c8 -n src/add.js -n src/at.js -n src/capitalize.js -n src/words.js -n src/reduce.js -n src/ceil.js -n src/filter.js -n src/isEmpty.js -n src/compact.js -n src/toString.js mocha",
+    "coverage": "c8 report -n src/add.js -n src/at.js -n src/capitalize.js -n src/words.js -n src/reduce.js -n src/ceil.js -n src/filter.js -n src/isEmpty.js -n src/compact.js -n src/toString.js --reporter=text-lcov | coveralls"
   },
   "author": "",
   "license": "MIT",
@@ -18,5 +18,8 @@
     "mocha": "^9.1.3",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "packages": "^0.0.8"
   }
 }
