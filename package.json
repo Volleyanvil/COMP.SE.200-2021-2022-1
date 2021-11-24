@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "c8 --all --reporter=lcov --reporter=text-lcov mocha",
+    "localtest": "c8 mocha",
     "coverage": "c8 report --reporter=text-lcov | coveralls"
   },
   "author": "",
