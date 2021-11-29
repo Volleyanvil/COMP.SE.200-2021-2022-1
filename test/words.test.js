@@ -1,8 +1,12 @@
+/**
+ * 
+ * Tests based on equivalence classes of the tested function (words)
+ * 
+ */
 
 import chai from 'chai'
 import words from '../src/words.js'
 const expect = chai.expect
-var should = chai.should()
 
 describe("words: with valid parameters", () => {
   it("returns string with regex as a pattern correctly", () =>{

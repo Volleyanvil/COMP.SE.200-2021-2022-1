@@ -1,10 +1,14 @@
+/**
+ * 
+ * Testing isEmpty function with mostly positive approach
+ * 
+ */
 
 import chai from 'chai'
 import isEmpty from '../src/isEmpty.js'
 const expect = chai.expect
-var should = chai.should()
 
-describe("isEmpty: with iterable parameters", () => {
+describe("isEmpty: with iterable (valid) parameters", () => {
   it("returns false with non-empty array", () =>{
     expect(isEmpty([1, 10, 100])).to.be.false
   });

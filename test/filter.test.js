@@ -1,9 +1,15 @@
+/**
+ * 
+ * Testing filter function based return values
+ * Mostly positive test case approach
+ * Different kind of predicates defined within test cases
+ */
 
 import chai from 'chai'
 import filter from '../src/filter.js'
 const expect = chai.expect
-var should = chai.should()
 
+// Array of objects as an array to filter
 const customers = [
   {'name': 'Jack Customer', 'nationality': 'FIN', 'vip': true},
   {'name': 'Jaylene Customer', 'nationality': 'FIN', 'vip': false},
@@ -45,7 +51,7 @@ describe("filter: legal input test cases", () => {
   });
 })
 
-describe("filter: invalid parameters", () => {
+describe("filter: tests with invalid parameters", () => {
   let invalidPredicate = true
   let invalidArrayParameter = 'not an array'
   it("to throw error with invalid parameters", () =>{

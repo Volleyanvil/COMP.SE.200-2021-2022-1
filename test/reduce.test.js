@@ -1,18 +1,18 @@
+/**
+ * 
+ * Testing reduce function based return values
+ * Return value based approach
+ * Different kind of iteratees and accumulators defined within test cases
+ */
 
 import chai from 'chai'
 import reduce from '../src/reduce.js'
 const expect = chai.expect
-var should = chai.should()
 
-/* const customers = [
-  {'first': 'Jack', 'last': 'Customer', 'nationality': 'FIN', 'vip': true},
-  {'first': 'Jayline', 'last': 'Buyer', 'nationality': 'FIN', 'vip': false},
-  {'first': 'Jacques', 'last': 'Customer', 'nationality': 'EST', 'vip': true},
-  {'first': 'Jacqueline', 'last': 'Buyer', 'nationality': null, 'vip': false},
-] */
-
+// First valid iteratee is simple array with numbers
 const numberArray = [21, 13, 5, 2, 3, 1, 1, 8]
 
+// Object to iterate in some test cases
 const parties = {
   'SDP': {'now': 40, 'prev': 34},
   'PS': {'now': 38, 'prev': 38},
@@ -27,6 +27,8 @@ const parties = {
 }
 
 describe("reduce: legal input test cases", () => {
+  
+  // iteratee to check how a party succeeded compared to previous election
   let iteratee1 = ((result, item, key) => {
     if (item.prev === 0) {
       result.new.push(key)
@@ -39,6 +41,8 @@ describe("reduce: legal input test cases", () => {
     }
     return result
   })
+  
+  // initialised result object
   let accumulator1 = {'winners': [], 'losers': [], 'equal': [], 'new': []}
 
   it("to reduce object correctly", () =>{
@@ -61,14 +65,14 @@ describe("reduce: legal input test cases", () => {
   });
 })
 
-describe("reduce: invalid parameters", () => {
+describe("reduce: invalid parameters test cases", () => {
   let iteratee2 = (prev, curr) => curr < prev ? curr : prev
   
-  it("to throw error with null to reduce without default value", () =>{
+  it("return null, when null is reduced without default value", () =>{
       expect(reduce(null, iteratee2)).to.be.null
   });
 
-  it("to throw error with null to reduce without default value", () =>{
+  it("return null, when all three parameters are null", () =>{
     expect(reduce(null, null, null)).to.be.null
-});
+  });
 })

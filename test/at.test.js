@@ -1,15 +1,23 @@
+/**
+ * Testing function at
+ * 
+ * Return value based mostly positive approach
+ * 
+ */
+
 
 import chai from 'chai'
 import at from '../src/at.js'
 const expect = chai.expect
-var should = chai.should()
 
+// Simple object, not nested, different types of values
 let simpleObject = {
   'first': 1,
   'second': 'two',
   'boolean': true
 }
 
+// Nested object
 let nestedObject = {
   'first': 1,
   'second': 'two',

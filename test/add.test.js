@@ -1,22 +1,26 @@
+/**
+ * 
+ * Tests based on equivalence classes of the tested function (add)
+ * 
+ */
 
 import chai from 'chai'
 import add from '../src/add.js'
 const expect = chai.expect
-var should = chai.should()
 
-describe("add: adding number parameters", () => {
-    it("both positive numbers", () =>{
+describe("add: testing number parameters", () => {
+    it("both parameters positive numbers", () =>{
         expect(add(1,1)).to.equal(2)
     });
     it("positive and negative numbers", () =>{
         expect(add(-1,2)).to.equal(1)
     });
-    it("both negative numbers", () =>{
+    it("both parameters negative numbers", () =>{
         expect(add(-1,-1)).to.equal(-2)
     });
 })
 
-describe("add: adding non-number parameters", () => {
+describe("add: testing non-number parameters", () => {
     it("number and string", () =>{
         expect(() => { add(1,'abc') }).to.throw(TypeError)
     });

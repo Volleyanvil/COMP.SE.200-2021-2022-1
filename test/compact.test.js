@@ -1,10 +1,14 @@
+/**
+ * 
+ * Testing compact function based on equivalence classes
+ * 
+ */
 
 import chai from 'chai'
 import compact from '../src/compact.js'
 const expect = chai.expect
-var should = chai.should()
 
-describe("compact: with array inputs", () => {
+describe("compact: test cases with array inputs", () => {
   it("Array with truthy and falsy values", () =>{
     const truthyAndFalsyArray = [1, '', 0, true]  
     expect(compact(truthyAndFalsyArray)).to.have.members([1, true])
@@ -22,7 +26,8 @@ describe("compact: with array inputs", () => {
   });
 })
 
-describe("compact: with non-array inputs", () => {
+describe("compact: test cases with non-array inputs", () => {
+  // String is tested here, even though it is array-like
   it("String input", () =>{
       expect(compact('abc')).to.have.members(['a', 'b', 'c'])
   });
