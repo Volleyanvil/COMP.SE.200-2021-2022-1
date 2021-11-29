@@ -26,4 +26,7 @@ describe("ceil: non-number parameters", () => {
   it("to return NaN with parameters number and NaN", () =>{
     expect(ceil(4.001, 'one')).to.be.NaN
   });
+  it("to return NaN with both parameters being NaN", () =>{
+    expect(ceil('not a number', 'one')).to.be.NaN
+  });
 })
